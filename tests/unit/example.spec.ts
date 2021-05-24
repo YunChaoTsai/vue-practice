@@ -1,11 +1,11 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import Timer from '@/components/Timer.vue'
 
-describe('HelloWorld.vue', () => {
+describe('Timer.vue', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg }
+    const msg = 'Not yet'
+    const wrapper = shallowMount(Timer, {
+      props: { from: 5000 }
     })
     expect(wrapper.text()).toMatch(msg)
   })
